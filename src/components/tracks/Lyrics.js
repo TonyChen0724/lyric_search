@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Spinner from '../layout/Spinner';
 import {Link} from 'react-router-dom';
+import Moment from 'react-moment'
 
 class Lyrics extends Component {
 
@@ -54,11 +55,11 @@ class Lyrics extends Component {
             </li>
 
             <li className="list-group-item">
-              <strong>Explicit Words</strong>{track.explicit === 0 ? 'No' : 'Yes'}
+              <strong>Explicit Words</strong>: {track.explicit === 0 ? 'No' : 'Yes'}
             </li>
 
             <li className="list-group-item">
-              
+              <strong>Release Date</strong>: <Moment format="MM/DD/YYYY">{track.first_release_date}</Moment>
             </li>
 
 
